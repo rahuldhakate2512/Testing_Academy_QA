@@ -1,0 +1,43 @@
+:root { font-family: Arial, Helvetica, sans-serif; color: #111827; background: #eef1f5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+.shell { min-height: 100vh; padding: 24px; }
+.tabs { max-width: 1100px; margin: 0 auto 10px; display: flex; gap: 8px; }
+.tabs button { border: 2px solid #111827; background: white; border-radius: 10px; padding: 8px 14px; cursor: pointer; }
+.tabs button.active { background: #111827; color: white; }
+.card { max-width: 1100px; margin: 0 auto; border: 3px solid #111827; border-radius: 22px; background: white; padding: 22px; }
+h1 { margin: 0 0 18px; text-align: center; font-size: 24px; }
+.issue-form { max-width: 760px; margin: 0 auto 18px; }
+.issue-form label { display: block; font-weight: 700; margin-bottom: 6px; }
+.form-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+input { width: 100%; border: 2px solid #111827; border-radius: 10px; padding: 10px 12px; }
+button { border: 2px solid #111827; border-radius: 10px; background: white; padding: 10px 14px; cursor: pointer; }
+button:disabled { opacity: 0.55; cursor: wait; }
+.state { max-width: 760px; margin: 12px auto; border: 2px solid #111827; border-radius: 12px; padding: 18px; text-align: center; }
+.error { border-color: #b91c1c; color: #991b1b; background: #fff7f7; }
+.plan { border-top: 2px solid #111827; margin-top: 18px; padding-top: 14px; }
+.plan-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; }
+.plan-heading div { display: flex; align-items: center; gap: 10px; }
+.plan-heading a { color: #2563eb; }
+.plan-heading span { border: 1px solid #9ca3af; border-radius: 999px; padding: 5px 9px; font-size: 12px; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; border: 2px solid #111827; border-radius: 12px; padding: 18px; background: #fafafa; line-height: 1.45; }
+.settings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.env-import { display: block; max-width: 760px; margin: 0 auto 16px; font-weight: 700; }
+.env-import input { display: block; margin-top: 6px; border-style: dashed; }
+.setting-panel { border: 3px solid #111827; border-radius: 18px; padding: 18px; }
+.setting-panel h2 { margin-top: 0; text-align: center; }
+.setting-panel label { display: block; font-weight: 700; margin: 10px 0; }
+.setting-panel label input { display: block; margin-top: 5px; }
+.setting-panel button { width: 100%; }
+.provider { border: 1px solid #d1d5db; border-radius: 8px; padding: 9px; margin: 8px 0; }
+.provider em { color: #2563eb; font-style: normal; }
+.groq { color: #2563eb; font-weight: 700; }
+.save { display: block; margin: 16px auto 0; min-width: 180px; }
+.settings-message { text-align: center; margin-top: 12px; }
+@media (max-width: 760px) {
+  .shell { padding: 12px; }
+  .settings-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .plan-heading { align-items: flex-start; flex-direction: column; }
+}

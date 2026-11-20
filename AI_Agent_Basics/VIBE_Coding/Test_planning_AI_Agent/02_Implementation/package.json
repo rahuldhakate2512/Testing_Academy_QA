@@ -1,0 +1,21 @@
+{
+  "name": "jira-test-plan-generator",
+  "private": true,
+  "workspaces": [
+    "src/backend",
+    "src/frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm run dev --prefix src/frontend\" \"npm run dev --prefix src/backend\"",
+    "start": "npm run start --prefix src/backend",
+    "build": "npm run build --prefix src/frontend",
+    "test": "node --test src/backend/tests/*.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
